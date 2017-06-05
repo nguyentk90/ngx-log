@@ -1,7 +1,7 @@
 {
   "name": "ngx-log",
   "description": "Angular Log Service Library",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "scripts": {
     "build": "gulp build",
     "build:watch": "gulp",

@@ -1,3 +1,7 @@
+[![Angular 2 Style Guide](https://mgechev.github.io/angular2-style-guide/images/badge.svg)](https://github.com/mgechev/angular2-style-guide)
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+[![npm version](https://badge.fury.io/js/ngx-log.svg)](http://badge.fury.io/js/ngx-log)
+
 # ngx-log
 > Angular Log Service Library, automatically hide console log on Production
 
