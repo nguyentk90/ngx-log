@@ -1,0 +1,27 @@
+{
+  "name": "ngx-log",
+  "version": "0.1.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nguyentk90/ngx-log"
+  },
+  "author": {
+    "name": "Tran Khanh Nguyen",
+    "email": "nguyentk90@outlook.com"
+  },
+  "keywords": [
+    "angular",
+    "log"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nguyentk90/ngx-log/issues"
+  },
+  "module": "ngx-log.js",
+  "typings": "ngx-log.d.ts",
+  "peerDependencies": {
+    "@angular/core": "^4.0.0",
+    "rxjs": "^5.1.0",
+    "zone.js": "^0.8.4"
+  }
+}
