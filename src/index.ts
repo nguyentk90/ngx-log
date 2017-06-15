@@ -16,10 +16,10 @@ export * from './log.service';
   ]
 })
 export class LogModule {
-  static forRoot(env: string): ModuleWithProviders {
+  static forRoot(env: string, productionConstant: string = 'production'): ModuleWithProviders {
     return {
       ngModule: LogModule,
-      providers: [{ provide: LogService, useValue: new LogService(env) }]
+      providers: [{ provide: LogService, useValue: new LogService(env, productionConstant) }]
     };
   }
 }

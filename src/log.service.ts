@@ -10,7 +10,7 @@ enum LogType {
 @Injectable()
 export class LogService {
 
-  constructor(private env: string) {
+  constructor(private env: string,private productionConstant: string) {
 
   }
 
@@ -69,6 +69,6 @@ export class LogService {
   }
 
   private isProduction(): boolean {
-    return this.env === 'production';
+    return this.env === this.productionConstant;
   }
 }

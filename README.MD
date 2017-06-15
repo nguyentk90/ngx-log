@@ -26,6 +26,15 @@ log(text: string, param?: any, force?: boolean)
 
 From your Angular `AppModule`:
 
+`env`: It's ussally `process.env.NODE_ENV`
+
+`productionConstant`: Default is `production`, but you can adjust to match with your project
+
+```typescript
+LogModule.forRoot(env: string, productionConstant: string = 'production');
+```
+
+Sample import snippet
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
