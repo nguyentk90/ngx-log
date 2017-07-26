@@ -1,8 +1,14 @@
+import { ConfigService } from './config.service';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LogService } from './log.service';
 
 export * from './log.service';
+
+export function fatoryConfig(isProduction: boolean): ConfigService {
+  return {
+    isProduction: isProduction
+  };
+}
 
 @NgModule({
   imports: [
@@ -16,10 +22,10 @@ export * from './log.service';
   ]
 })
 export class LogModule {
-  static forRoot(env: string, productionConstant: string = 'production'): ModuleWithProviders {
+  static forRoot(isProduction: boolean): ModuleWithProviders {
     return {
       ngModule: LogModule,
-      providers: [{ provide: LogService, useValue: new LogService(env, productionConstant) }]
+      providers: [{ provide: ConfigService, useValue: fatoryConfig(isProduction) }]
     };
   }
 }

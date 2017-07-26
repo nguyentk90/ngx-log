@@ -26,12 +26,8 @@ log(text: string, param?: any, force?: boolean)
 
 From your Angular `AppModule`:
 
-`env`: It's ussally `process.env.NODE_ENV`
-
-`productionConstant`: Default is `production`, but you can adjust to match with your project
-
 ```typescript
-LogModule.forRoot(env: string, productionConstant: string = 'production');
+LogModule.forRoot(isProduction: boolean);
 ```
 
 Sample import snippet
@@ -53,7 +49,7 @@ import { LogModule } from 'ngx-log';
 
     // Import LogModule 
     // process.env.NODE_ENV should be defined on your Webpack (production/development/test)
-    LogModule.forRoot(process.env.NODE_ENV)
+    LogModule.forRoot(process.env.NODE_ENV === 'production')
   ],
   providers: [],
   bootstrap: [AppComponent]

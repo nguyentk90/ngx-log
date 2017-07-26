@@ -1,3 +1,4 @@
+import { ConfigService } from './config.service';
 import { Injectable } from '@angular/core';
 
 enum LogType {
@@ -10,7 +11,7 @@ enum LogType {
 @Injectable()
 export class LogService {
 
-  constructor(private env: string,private productionConstant: string) {
+  constructor(private config: ConfigService) {
 
   }
 
@@ -34,7 +35,7 @@ export class LogService {
     if (force) {
       this.console(type, text, param);
     } else {
-      if (!this.isProduction()) {
+      if (!this.config.isProduction) {
         this.console(type, text, param);
       }
     }
@@ -66,9 +67,5 @@ export class LogService {
     } else {
       log(text);
     }
-  }
-
-  private isProduction(): boolean {
-    return this.env === this.productionConstant;
-  }
+  } 
 }
