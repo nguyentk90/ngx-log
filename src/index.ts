@@ -1,6 +1,7 @@
 import { ConfigService } from './config.service';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LogService } from './log.service';
 
 export * from './log.service';
 
@@ -19,6 +20,9 @@ export function fatoryConfig(isProduction: boolean): ConfigService {
   ],
   exports: [
 
+  ],
+  providers: [
+    LogService
   ]
 })
 export class LogModule {
