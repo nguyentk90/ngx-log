@@ -83,4 +83,4 @@ export class AppComponent {
 
 ## License
 
-MIT © [Tran Khanh Nguyen](https://nguyentr.com)
+MIT © [Nguyen Tran](https://nguyentr.com)
